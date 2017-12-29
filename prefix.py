@@ -1,19 +1,3 @@
-##take saax representation as a dictionary with keys letters and values values.
-##don't forget preprocessing time series ( differencing)
-
-##trie will be a  nested dictionary with keys equals to the letter, value will be a list
-##with key for the next branch and another values for numbers.
-##in values devo memorizzare la chiave per il successivo pezzo del dizionario ma anche memorizzare il valore numerico della serie...
-#
-
-#
-
-#objects
-##object q (state): method to get its predecessor and method to get the rest of the chain appended
-## properties:
-
-##la chiave del dizionario può essere un'ogget
-
 
 
 # Time:  O(n), per operation
@@ -130,7 +114,12 @@ class Trie:
 
 # Your Trie object will be instantiated and called as such:
 trie = Trie()
+#pass data
+
 trie.insert("abcbcbcdc",[0,0.55,0.55,-0.6,0.57,-0.52,0.6,0.07,-0.32],3)
+
+#predictions
+
 predictions=trie.predict("c","abcbcbcdc",[0,0.55,0.55,-0.6,0.57,-0.52,0.6,0.07,-0.32])
 print(predictions)
 #trie.insert("ac")
