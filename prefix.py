@@ -104,30 +104,4 @@ class Trie:
 
 
 
-# Your Trie object will be instantiated and called as such:
-trie = Trie()
-#pass data
-data=pandas.read_csv('')
-
-command = 'Rscript'
-path2script = 'path/to your script/max.R'
-
-# Variable number of args in a list
-args = ['11', '3', '9', '42']
-
-# Build subprocess command
-cmd = [command, path2script] + args
-
-# check_output will run the command and store to result
-x = subprocess.check_output(cmd, universal_newlines=True)
-x= [''.join(i) for i in x]
-#serie1 serie numerica in differenze da prendere dal dataset
-trie.insert(x,serie1,3)
-
-#predictions
-
-predictions=trie.predict("c","abcbcbcdc",[0,0.55,0.55,-0.6,0.57,-0.52,0.6,0.07,-0.32])
-print(predictions)
-#trie.insert("ac")
-#trie.search("key")
 #ab ba ec cd-h
