@@ -11,6 +11,8 @@
 
 import sys
 
+
+
 class TrieNode:
     # Initialize your data structure here.
     def __init__(self,k):
@@ -65,16 +67,6 @@ class Trie:
 
             window=window+1
 
-
-
-    # @param {string} word
-    # @return {boolean}
-    # Returns if the word is in the trie.
-    def search(self, word):
-        node = self.childSearch(word)
-        if node:
-            return node.is_string
-        return False
 
     # @param {string} prefix
     # @return {boolean}
