@@ -26,7 +26,7 @@ cmd = [command, path2script]+args
 saax_repr = list(subprocess.check_output(cmd, universal_newlines=True))
 #messy results, got to clean it.
 
-#join in one str
+#join in one str s
 saax_repr= [''.join(i) for i in saax_repr]
 
 #serie_numerica: time series in difference
