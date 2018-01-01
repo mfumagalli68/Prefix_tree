@@ -43,7 +43,7 @@ for f in saax_repr:
 
 #saax_repr=array('B', map(ord,saax_repr)).tostring()
 
-#serie_numerica: time series in differences
+#serie_numerica: time series in difference
 # Your Trie object will be instantiated and called as such:
 trie=prefix.Trie()
 trie.insert(saax_repr,serie_numerica,3)
