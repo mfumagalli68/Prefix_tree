@@ -1,9 +1,10 @@
 import prefix
 import pandas
 import subprocess
-# Your Trie object will be instantiated and called as such:
+import re
+import string
+from array import array
 
-trie = prefix.Trie()
 
 #read data
 data=pandas.read_csv('C:/Users/mauro/Documents/time_series.csv')
@@ -24,12 +25,27 @@ cmd = [command, path2script]+args
 
 # check_output will run the command and store to result. saax_repr: saax_representation of time series.
 saax_repr = list(subprocess.check_output(cmd, universal_newlines=True))
-#messy results, got to clean it.
 
+#messy results, got to clean it.
+for i in range(1,len(saax_repr)):
+
+    saax_repr[i]=re.sub('\s+', '', saax_repr[i])
+
+    for i in range(1, len(saax_repr)):
+        saax_repr[i] = re.sub('[^\w\s]', '', saax_repr[i])
+
+saax_repr=[i for i in saax_repr if i in list(string.ascii_lowercase)]
 #join in one str
-saax_repr= [''.join(i) for i in saax_repr]
+
+sax_fin = ''
+for f in saax_repr:
+    sax_fin = sax_fin + f
+
+#saax_repr=array('B', map(ord,saax_repr)).tostring()
 
 #serie_numerica: time series in differences
+# Your Trie object will be instantiated and called as such:
+trie=prefix.Trie()
 trie.insert(saax_repr,serie_numerica,3)
 
 #predictions
