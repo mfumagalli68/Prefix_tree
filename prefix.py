@@ -41,7 +41,7 @@ class Trie:
         if(isinstance(word,str)==False):
             sys.exit("errors, word must be a string")
         if( isinstance(value,list)==False):
-            sys.exit("errors, value must be a list")
+            value=list(value)
 
 
         while( window < len(word)):

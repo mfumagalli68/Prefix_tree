@@ -46,11 +46,11 @@ for f in saax_repr:
 #serie_numerica: time series in difference
 # Your Trie object will be instantiated and called as such:
 trie=prefix.Trie()
-trie.insert(saax_repr,serie_numerica,3)
+trie.insert(sax_fin,serie_numerica,3)
 
 #predictions
 
 predictions=trie.predict("c",saax_repr,serie_numerica)
 print(predictions)
-
+print (serie_numerica[179])
 #Need a tuning.py performance.py files where i can make tuning parameters: (alphabet size and PAA) and evaluate performance.
