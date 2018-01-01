@@ -1,4 +1,4 @@
-# Prefix_tree
+# Prefix_tree (work in progress)
 
 Prefix tree for short time series predictions based on the paper "Short-term Time Series Forecasting with Regression
 Automata".
